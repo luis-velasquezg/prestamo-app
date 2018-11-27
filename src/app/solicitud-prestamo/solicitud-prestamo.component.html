@@ -1,0 +1,51 @@
+
+<div class="card" width="50">
+    <div class="alert alert-primary" role="alert" *ngIf="error==true">
+            <h3 >Faltan campos por diligenciar</h3>
+            <h4>{{validation}}</h4>                  
+    </div>
+    <div class="card-body">
+            <h3 >Solicitar Prestamo de Dispositivo</h3>
+            <br/>
+
+            <label>Hora inicial *</label>
+            <!-- <input type="numeric" class="form-control" required [(ngModel)]="dispositivo.codigo"/> -->
+            <input type="numeric" class="form-control" required/>
+            <select class="form-control" name="horarioInicial" required>
+                <option value="Proyector">AM</option>
+                <option value="Computador">PM</option>
+            </select>
+
+            <br/>
+
+            <label>Hora final *</label>
+            <!-- <input type="numeric" class="form-control" required [(ngModel)]="dispositivo.codigo"/> -->
+            <input type="numeric" class="form-control" required/>
+            <select class="form-control" name="horarioFinal" required>
+                <option value="Proyector">AM</option>
+                <option value="Computador">PM</option>
+            </select>
+
+            <br/>
+
+            <mat-form-field>
+                <!-- <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" [(ngModel)]="actRegistrada.fecha"> -->
+                <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <!-- <label>Fechas</label> -->
+            
+            <br/>
+            
+
+            <!-- <a class="btn btn-dark" (click)="guardarRegistro()" >Enviar</a> -->
+            <a class="btn btn-primary"  >Solicitar</a>
+            <a class="btn btn-secondary" routerLink="/listadoDispositivos" >Cancelar</a>
+            
+            <br/>
+            <br/>
+            <label><small>* Campos requeridos</small></label>
+
+    </div>   
+</div>

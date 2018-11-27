@@ -1,0 +1,47 @@
+<h3>Registro de Dispositivos</h3>
+<div class="card">
+    <div class="card-body">
+        <label>Codigo *</label>
+        <!-- <input type="numeric" class="form-control" required [(ngModel)]="dispositivo.codigo"/> -->
+        <input type="numeric" class="form-control" required/>
+        <br/>
+        <label>Nombre *</label>
+        <!-- <input type="text" class="form-control" required [(ngModel)]="dispositivo.nombre"/> -->
+        <input type="text" class="form-control" required/>
+        <br/>
+        <label>Marca *</label>
+        <!-- <input type="text" class="form-control" required [(ngModel)]="dispositivo.marca"/> -->
+        <input type="text" class="form-control" required/>
+        <br/>
+        <div class="form-group">
+            <label for="categoria">Categoría *</label>
+            <!-- <select class="form-control" name="categoria" required [(ngModel)]="dispositivo.categoria"> -->
+            <select class="form-control" name="categoria" required>
+                <option value="Proyector">Proyector</option>
+                <option value="Computador">Computador</option>
+                <option value="Tableta">Tableta</option>
+                <option value="Microscopio">Microscopio</option>
+            </select>
+        </div>
+        <br/>
+        <label>Descripcion</label>
+        <!-- <input type="text" class="form-control" [(ngModel)]="dispositivo.descripcion"/>   -->
+        <input type="text" class="form-control"/>
+        <br/>
+        <label>Observaciones</label>
+        <!-- <input type="text" class="form-control" [(ngModel)]="dispositivo.observaciones"/>   -->
+        <input type="text" class="form-control"/>
+        <br/>
+        
+        <!-- Fecha_registro -->
+
+        <a class="btn btn-primary" (click)="guardarDispositivo()">Registrar</a>
+        <!-- <a class="btn btn-primary" >Registrar</a> -->
+        <a class="btn btn-secondary" routerLink="/listadoDispositivos" >Cancelar</a>
+
+        <br/>
+        <br/>
+        <label><small>* Campos requeridos</small></label>
+
+    </div>
+</div>
